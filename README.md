@@ -40,6 +40,7 @@
 - [Quick Start with Agent Examples][quick-start]
   - [Localhost][localhost-section]
   - [Codespaces][codespaces-section]
+- [Voice Interaction Integration Guide][voice-integration-guide]
 - [Agent Examples Self-Hosting][agent-examples-self-hosting]
   - [Deploying with Docker][deploying-with-docker]
   - [Deploying with other cloud services][deploying-with-other-cloud-services]
@@ -171,6 +172,8 @@ See the [integration guide][esp32-guide] for more details.
 </div>
 
 ## Quick Start with Agent Examples
+
+> 💡 **New to voice interaction?** Check out our comprehensive [Voice Interaction Integration Guide][voice-integration-guide] to learn how to integrate voice capabilities into your existing projects, understand API interfaces, and check compatibility requirements.
 
 ### Localhost
 
@@ -469,6 +472,7 @@ Contributions are welcome! Please read the [contribution guidelines][contributio
 [quick-start]: #quick-start-with-agent-examples
 [localhost-section]: #localhost
 [codespaces-section]: #codespaces
+[voice-integration-guide]: ./docs/getting-started/voice-interaction-integration.md
 [agent-examples-self-hosting]: #agent-examples-self-hosting
 [deploying-with-docker]: #deploying-with-docker
 [deploying-with-other-cloud-services]: #deploying-with-other-cloud-services

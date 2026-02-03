@@ -43,6 +43,7 @@
 - [代理示例快速上手][quick-start]
   - [本地环境][localhost-section]
   - [Codespaces][codespaces-section]
+- [语音交互集成指南][voice-integration-guide]
 - [代理示例自托管][agent-examples-self-hosting]
   - [使用 Docker 部署][deploying-with-docker]
   - [部署到其他云服务][deploying-with-other-cloud-services]
@@ -178,6 +179,8 @@ TEN 是一个面向语音对话 AI 代理的开源框架。
 <a name="quick-start-with-agent-examples"></a>
 
 ## 代理示例快速上手
+
+> 💡 **第一次接触语音交互？** 查看我们的 [语音交互集成指南][voice-integration-guide] 了解如何将语音能力集成到现有项目、理解 API 接口以及检查兼容性要求。
 
 <a name="localhost"></a>
 
@@ -541,6 +544,7 @@ TEN Framework 也可通过以下 AI 驱动的问答平台获取信息，它们�
 [quick-start]: #quick-start-with-agent-examples
 [localhost-section]: #localhost
 [codespaces-section]: #codespaces
+[voice-integration-guide]: ./getting-started/voice-interaction-integration.cn.md
 [agent-examples-self-hosting]: #agent-examples-self-hosting
 [deploying-with-docker]: #deploying-with-docker
 [deploying-with-other-cloud-services]: #deploying-with-other-cloud-services
