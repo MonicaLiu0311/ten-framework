@@ -2,6 +2,8 @@
 
 A comprehensive voice assistant with real-time conversation capabilities using Agora RTC, Deepgram STT, OpenAI LLM, and ElevenLabs TTS.
 
+English | [简体中文](README.zh-CN.md) | [Integration Guide 集成指南](VOICE_INTEGRATION_GUIDE.zh-CN.md)
+
 ## Features
 
 - **Chained Model Real-time Voice Interaction**: Complete voice conversation pipeline with STT → LLM → TTS processing
