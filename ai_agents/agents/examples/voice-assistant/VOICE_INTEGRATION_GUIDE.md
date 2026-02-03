@@ -505,7 +505,7 @@ ws://localhost:8080/ws?session={session_id}
 # Enable streaming
 config = {
     "streaming": {
-        "enabled": true,
+        "enabled": True,
         "chunk_size": 1024
     }
 }

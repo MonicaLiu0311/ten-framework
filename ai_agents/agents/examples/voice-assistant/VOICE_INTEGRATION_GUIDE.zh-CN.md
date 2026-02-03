@@ -591,7 +591,7 @@ ws://localhost:8080/ws?session={session_id}
 # 启用流式处理
 config = {
     "streaming": {
-        "enabled": true,
+        "enabled": True,
         "chunk_size": 1024
     }
 }
