@@ -185,6 +185,8 @@ TEN 是一个面向语音对话 AI 代理的开源框架。
 
 #### 步骤 ⓵ - 前置条件
 
+> 💡 **还没有 API 密钥？** 查看 [免费试用指南][free-trial-guide-cn] 了解如何免费获取所有必需的 API 密钥！
+
 | 类别 | 要求 |
 | --- | --- |
 | **密钥** | • Agora [App ID][agora-app-certificate] 与 [App Certificate][agora-app-certificate]（每月赠送免费分钟）<br>• [OpenAI][openai-api] API Key（兼容 OpenAI 协议的任意 LLM）<br>• [Deepgram][deepgram] ASR（注册即可获得免费额度）<br>• [ElevenLabs][elevenlabs] TTS（注册即可获得免费额度） |
@@ -624,6 +626,7 @@ TEN Framework 也可通过以下 AI 驱动的问答平台获取信息，它们�
 [voice-assistant-example]: ../ai_agents/agents/examples/voice-assistant
 [voice-assistant-readme-cn]: ../ai_agents/agents/examples/voice-assistant/README.zh-CN.md
 [voice-integration-guide-cn]: ../ai_agents/agents/examples/voice-assistant/VOICE_INTEGRATION_GUIDE.zh-CN.md
+[free-trial-guide-cn]: ../ai_agents/agents/examples/voice-assistant/FREE_TRIAL_GUIDE.zh-CN.md
 [divider-light]: https://github.com/user-attachments/assets/aec54c94-ced9-4683-ae58-0a5a7ed803bd#gh-light-mode-only
 [divider-dark]: https://github.com/user-attachments/assets/d57fad08-4f49-4a1c-bdfc-f659a5d86150#gh-dark-mode-only
 [lip-sync-image]: https://github.com/user-attachments/assets/51ab1504-b67c-49d4-8a7a-5582d9b254da
