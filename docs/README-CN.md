@@ -624,9 +624,9 @@ TEN Framework 也可通过以下 AI 驱动的问答平台获取信息，它们�
 [voice-assistant-vad-example]: ../ai_agents/agents/examples/voice-assistant-with-ten-vad
 [voice-assistant-turn-detection-example]: ../ai_agents/agents/examples/voice-assistant-with-turn-detection
 [voice-assistant-example]: ../ai_agents/agents/examples/voice-assistant
-[voice-assistant-readme-cn]: ../ai_agents/agents/examples/voice-assistant/README.zh-CN.md
-[voice-integration-guide-cn]: ../ai_agents/agents/examples/voice-assistant/VOICE_INTEGRATION_GUIDE.zh-CN.md
-[free-trial-guide-cn]: ../ai_agents/agents/examples/voice-assistant/FREE_TRIAL_GUIDE.zh-CN.md
+[voice-assistant-readme-cn]: https://github.com/MonicaLiu0311/ten-framework/blob/copilot/configure-voice-interaction/ai_agents/agents/examples/voice-assistant/README.zh-CN.md
+[voice-integration-guide-cn]: https://github.com/MonicaLiu0311/ten-framework/blob/copilot/configure-voice-interaction/ai_agents/agents/examples/voice-assistant/VOICE_INTEGRATION_GUIDE.zh-CN.md
+[free-trial-guide-cn]: https://github.com/MonicaLiu0311/ten-framework/blob/copilot/configure-voice-interaction/ai_agents/agents/examples/voice-assistant/FREE_TRIAL_GUIDE.zh-CN.md
 [divider-light]: https://github.com/user-attachments/assets/aec54c94-ced9-4683-ae58-0a5a7ed803bd#gh-light-mode-only
 [divider-dark]: https://github.com/user-attachments/assets/d57fad08-4f49-4a1c-bdfc-f659a5d86150#gh-dark-mode-only
 [lip-sync-image]: https://github.com/user-attachments/assets/51ab1504-b67c-49d4-8a7a-5582d9b254da
