@@ -1,0 +1,136 @@
+# =====================================================
+# TEN Framework 语音助手配置
+# 配置方案：Qwen LLM + Deepgram STT + Bytedance TTS
+# =====================================================
+
+# ------------------------------
+# Log & Server & Worker
+# ------------------------------
+
+LOG_PATH=/tmp/ten_agent
+LOG_STDOUT=true
+GRAPH_DESIGNER_SERVER_PORT=49483
+SERVER_PORT=8080
+WORKERS_MAX=100
+WORKER_QUIT_TIMEOUT_SECONDS=60
+
+# ------------------------------
+# Frontend
+# ------------------------------
+
+AGENT_SERVER_URL=http://localhost:8080
+TEN_DEV_SERVER_URL=http://localhost:49483
+NEXT_PUBLIC_EDIT_GRAPH_MODE=true
+
+# ------------------------------
+# RTC - Agora (声网实时通信)
+# ------------------------------
+# 获取方式：https://console.agora.io/
+# 免费额度：每月 10,000 分钟
+
+AGORA_APP_ID=
+AGORA_APP_CERTIFICATE=
+
+# ------------------------------
+# LLM - Qwen (通义千问)
+# ------------------------------
+# 获取方式：https://dashscope.aliyun.com/
+# 免费额度：100 万 tokens/月
+# 
+# Qwen 使用 OpenAI 兼容 API，因此使用 openai_llm2_python 扩展
+# 只需配置 base_url 为 Qwen 的 API 地址
+
+QWEN_API_KEY=
+QWEN_API_BASE=https://dashscope.aliyuncs.com/compatible-mode/v1
+QWEN_MODEL=qwen-max
+
+# 可选的其他 Qwen 模型：
+# QWEN_MODEL=qwen-max        # 最强性能，推荐
+# QWEN_MODEL=qwen-plus       # 平衡性能和速度
+# QWEN_MODEL=qwen-turbo      # 更快速度
+
+# ------------------------------
+# STT - Deepgram (语音转文字)
+# ------------------------------
+# 获取方式：https://console.deepgram.com/
+# 免费额度：新用户 $200 额度
+
+DEEPGRAM_API_KEY=
+
+# 可选配置：
+# 语言设置（默认 zh-CN 中文，可改为 en-US 英文）
+# 模型设置（nova-3 是最新模型）
+
+# ------------------------------
+# TTS - Bytedance (字节跳动语音合成)
+# ------------------------------
+# 获取方式：https://console.volcengine.com/
+# 需要在火山引擎开通语音合成服务
+
+BYTEDANCE_TTS_APPID=
+BYTEDANCE_TTS_TOKEN=
+
+# 可选配置：
+# 说话人选择（在 property.json 中配置）：
+# - zh_female_qingxin   中文女声-清新
+# - zh_male_chunhou     中文男声-淳厚
+# - zh_female_wanxin    中文女声-婉馨
+# 更多说话人请查看火山引擎文档
+
+# ------------------------------
+# Tools - Aliyun (可选)
+# ------------------------------
+# 如果需要使用阿里云文本嵌入等工具服务
+
+ALIYUN_TEXT_EMBEDDING_API_KEY=
+
+# ------------------------------
+# DB - 数据库 (可选，不配置也能运行)
+# ------------------------------
+# 数据库配置是可选的，用于：
+# - 持久化对话历史
+# - 向量搜索
+# - 长期记忆功能
+#
+# 如果只是试用或开发测试，可以不配置数据库
+
+# Aliyun AnalyticDB 向量存储 (可选)
+# ALIBABA_CLOUD_ACCESS_KEY_ID=
+# ALIBABA_CLOUD_ACCESS_KEY_SECRET=
+# ALIYUN_ANALYTICDB_ACCOUNT=
+# ALIYUN_ANALYTICDB_ACCOUNT_PASSWORD=
+# ALIYUN_ANALYTICDB_INSTANCE_ID=
+# ALIYUN_ANALYTICDB_INSTANCE_REGION=cn-shanghai
+# ALIYUN_ANALYTICDB_NAMESPACE=
+# ALIYUN_ANALYTICDB_NAMESPACE_PASSWORD=
+
+# =====================================================
+# 配置完成后的使用步骤：
+# =====================================================
+#
+# 1. 复制此文件为 .env：
+#    cp env_qwen_deepgram_bytedance.example .env
+#
+# 2. 填写上面的 API 密钥
+#
+# 3. 复制 property.json：
+#    cp property_qwen_deepgram_bytedance.json agents/examples/voice-assistant/tenapp/property.json
+#
+# 4. 安装依赖：
+#    task install
+#
+# 5. 运行服务：
+#    task run
+#
+# 6. 访问应用：
+#    http://localhost:3000
+#
+# =====================================================
+# 获取帮助：
+# =====================================================
+#
+# - 配置指南：CONFIGURATION_QWEN_DEEPGRAM_BYTEDANCE.md
+# - 安全指南：API_KEYS_SECURITY_GUIDE.zh-CN.md
+# - 集成指南：agents/examples/voice-assistant/VOICE_INTEGRATION_GUIDE.zh-CN.md
+#
+# =====================================================
