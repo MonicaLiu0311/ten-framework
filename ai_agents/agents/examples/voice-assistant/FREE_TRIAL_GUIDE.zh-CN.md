@@ -436,6 +436,8 @@ cp .env.example .env
 
 ### 4. 修改 property.json（如果使用替代服务）
 
+> 📝 **重要提示**：如果您使用了替代服务（不是默认的 Deepgram + OpenAI + ElevenLabs），**必须修改** `property.json` 配置文件。详细的技术说明和原理请参阅 [配置文件修改指南](CONFIG_MODIFICATION_GUIDE.zh-CN.md)。
+
 如果您使用了替代服务（不是默认的 Deepgram + OpenAI + ElevenLabs），需要修改配置文件：
 
 **位置**：`agents/examples/voice-assistant/tenapp/property.json`

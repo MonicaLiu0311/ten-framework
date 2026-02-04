@@ -5,6 +5,8 @@
 [English](README.md) | 简体中文
 
 > 💡 **没有 API 密钥？** 查看 [免费试用指南](FREE_TRIAL_GUIDE.zh-CN.md) 了解如何免费开始！
+> 
+> 📝 **使用替代服务？** 查看 [配置文件修改指南](CONFIG_MODIFICATION_GUIDE.zh-CN.md) 了解如何正确配置！
 
 ## 功能特性
 

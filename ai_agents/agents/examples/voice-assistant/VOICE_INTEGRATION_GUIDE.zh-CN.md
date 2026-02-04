@@ -4,6 +4,8 @@
 
 [English](VOICE_INTEGRATION_GUIDE.md) | 简体中文
 
+> 📝 **重要提示**：如果您使用替代服务提供商（不是默认的 Deepgram + OpenAI + ElevenLabs），请务必阅读 [配置文件修改指南](CONFIG_MODIFICATION_GUIDE.zh-CN.md) 了解如何正确配置。
+
 ## 目录
 
 - [适配性评估](#适配性评估)
