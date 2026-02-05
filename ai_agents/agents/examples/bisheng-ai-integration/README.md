@@ -69,7 +69,21 @@ BISHENG_AI_WORKFLOW_ID=your_workflow_id        # 可选，使用工作流时提�
 - `BISHENG_AI_ASSISTANT_ID` 和 `BISHENG_AI_WORKFLOW_ID` 至少提供一个
 - 如果两个都提供，系统会优先使用助手模式
 
-#### 2. 安装依赖
+#### 2. 测试配置（可选但推荐）
+
+在运行服务前，建议先测试毕昇AI连接：
+
+```bash
+cd ai_agents/agents/examples/bisheng-ai-integration
+python3 test_connection.py
+```
+
+这个脚本会：
+- 检查所有必需的环境变量
+- 测试与毕昇AI服务的连接
+- 验证响应格式是否正确
+
+#### 3. 安装依赖
 
 ```bash
 cd ai_agents/agents/examples/bisheng-ai-integration
@@ -78,14 +92,14 @@ task install
 
 这将安装Python依赖和前端组件。
 
-#### 3. 运行语音助手
+#### 4. 运行语音助手
 
 ```bash
 cd ai_agents/agents/examples/bisheng-ai-integration
 task run
 ```
 
-#### 4. 访问应用
+#### 5. 访问应用
 
 - **前端**: http://localhost:3000 （前端会自动生成8000-9000之间的随机WebSocket端口）
 - **API服务器**: http://localhost:8080
@@ -369,7 +383,21 @@ BISHENG_AI_WORKFLOW_ID=your_workflow_id        # Optional, provide when using wo
 - Provide at least one of `BISHENG_AI_ASSISTANT_ID` or `BISHENG_AI_WORKFLOW_ID`
 - If both are provided, the system will prioritize assistant mode
 
-#### 2. Install Dependencies
+#### 2. Test Configuration (Optional but Recommended)
+
+Before running the service, it's recommended to test your Bisheng AI connection:
+
+```bash
+cd ai_agents/agents/examples/bisheng-ai-integration
+python3 test_connection.py
+```
+
+This script will:
+- Check all required environment variables
+- Test connection to Bisheng AI service
+- Verify the response format is correct
+
+#### 3. Install Dependencies
 
 ```bash
 cd ai_agents/agents/examples/bisheng-ai-integration
@@ -378,14 +406,14 @@ task install
 
 This installs Python dependencies and frontend components.
 
-#### 3. Run the Voice Assistant
+#### 4. Run the Voice Assistant
 
 ```bash
 cd ai_agents/agents/examples/bisheng-ai-integration
 task run
 ```
 
-#### 4. Access the Application
+#### 5. Access the Application
 
 - **Frontend**: http://localhost:3000 (The frontend will automatically generate a random WebSocket port between 8000-9000)
 - **API Server**: http://localhost:8080
