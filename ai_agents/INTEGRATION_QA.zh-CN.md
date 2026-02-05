@@ -331,7 +331,7 @@ from openai import OpenAI
 import json
 
 client = OpenAI(
-    api_key="sk-5dac8785e96943828bf486f99c39a869",
+    api_key="sk-111111111111111111111",
     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
 )
 
