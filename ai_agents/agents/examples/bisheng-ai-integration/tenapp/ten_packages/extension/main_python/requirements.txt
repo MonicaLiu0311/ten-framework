@@ -1,0 +1,5 @@
+# HTTP client for Bisheng AI integration
+aiohttp>=3.8.0
+
+# Configuration and validation
+pydantic

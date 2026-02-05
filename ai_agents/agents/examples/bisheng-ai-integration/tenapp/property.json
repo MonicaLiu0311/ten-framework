@@ -1,0 +1,128 @@
+{
+  "ten": {
+    "predefined_graphs": [
+      {
+        "name": "voice_assistant",
+        "auto_start": true,
+        "graph": {
+          "nodes": [
+            {
+              "type": "extension",
+              "name": "websocket_server",
+              "addon": "websocket_server",
+              "extension_group": "default",
+              "property": {
+                "port": 8765,
+                "host": "0.0.0.0",
+                "sample_rate": 16000,
+                "channels": 1,
+                "bytes_per_sample": 2
+              }
+            },
+            {
+              "type": "extension",
+              "name": "stt",
+              "addon": "deepgram_asr_python",
+              "extension_group": "stt",
+              "property": {
+                "params": {
+                  "api_key": "${env:DEEPGRAM_API_KEY}",
+                  "language": "en-US",
+                  "model": "nova-3"
+                }
+              }
+            },
+
+            {
+              "type": "extension",
+              "name": "tts",
+              "addon": "elevenlabs_tts2_python",
+              "extension_group": "tts",
+              "property": {
+                "dump": false,
+                "dump_path": "./",
+                "params": {
+                  "key": "${env:ELEVENLABS_TTS_KEY}",
+                  "model_id": "eleven_multilingual_v2",
+                  "voice_id": "pNInz6obpgDQGcFmaJgB",
+                  "output_format": "pcm_16000"
+                }
+              }
+            },
+            {
+              "type": "extension",
+              "name": "main_control",
+              "addon": "main_python",
+              "extension_group": "control",
+              "property": {
+                "greeting": "您好！我已连接到毕昇AI语音服务。",
+                "bisheng_ai_url": "${env:BISHENG_AI_URL}",
+                "bisheng_ai_api_key": "${env:BISHENG_AI_API_KEY|}",
+                "bisheng_ai_assistant_id": "${env:BISHENG_AI_ASSISTANT_ID|}",
+                "bisheng_ai_workflow_id": "${env:BISHENG_AI_WORKFLOW_ID|}",
+                "bisheng_ai_timeout": 30
+              }
+            }
+          ],
+          "connections": [
+            {
+              "extension": "main_control",
+              "data": [
+                {
+                  "name": "asr_result",
+                  "source": [
+                    {
+                      "extension": "stt"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "extension": "websocket_server",
+              "audio_frame": [
+                {
+                  "name": "pcm_frame",
+                  "dest": [
+                    {
+                      "extension": "stt"
+                    }
+                  ]
+                },
+                {
+                  "name": "pcm_frame",
+                  "source": [
+                    {
+                      "extension": "tts"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "log": {
+      "handlers": [
+        {
+          "matchers": [
+            {
+              "level": "info"
+            }
+          ],
+          "formatter": {
+            "type": "plain",
+            "colored": true
+          },
+          "emitter": {
+            "type": "console",
+            "config": {
+              "stream": "stdout"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
