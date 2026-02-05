@@ -100,9 +100,11 @@ class MainControlExtension(AsyncExtension):
         支持助手(assistant)和工作流(workflow)两种模式
         """
         if not self.config.bisheng_ai_url:
-            error_msg = "Bisheng AI URL未配置"
-            self.ten_env.log_error(f"[MainControlExtension] {error_msg}")
-            await self._send_to_tts(error_msg, True)
+            error_msg_en = "Bisheng AI URL not configured"
+            error_msg_zh = "Bisheng AI URL未配置"
+            self.ten_env.log_error(f"[MainControlExtension] {error_msg_en}")
+            # Use Chinese error message for TTS (can be made configurable based on STT language)
+            await self._send_to_tts(error_msg_zh, True)
             return
 
         try:
@@ -124,7 +126,7 @@ class MainControlExtension(AsyncExtension):
                 request_data["workflow_id"] = self.config.bisheng_ai_workflow_id
 
             self.ten_env.log_info(
-                f"[MainControlExtension] 调用Bisheng AI: {self.config.bisheng_ai_url}"
+                f"[MainControlExtension] Calling Bisheng AI: {self.config.bisheng_ai_url}"
             )
 
             # 发送请求到Bisheng AI
@@ -146,7 +148,7 @@ class MainControlExtension(AsyncExtension):
                     )
                     
                     self.ten_env.log_info(
-                        f"[MainControlExtension] Bisheng AI响应: {response_text}"
+                        f"[MainControlExtension] Bisheng AI response: {response_text}"
                     )
 
                     # 发送助手回复的转录
@@ -155,19 +157,22 @@ class MainControlExtension(AsyncExtension):
                     # 发送到TTS进行语音合成
                     await self._send_to_tts(response_text, True)
                 else:
-                    error_msg = f"Bisheng AI返回错误: {response.status}"
+                    error_msg = f"Bisheng AI returned error: {response.status}"
                     self.ten_env.log_error(
                         f"[MainControlExtension] {error_msg}, {await response.text()}"
                     )
+                    # Error message in Chinese (can be made configurable)
                     await self._send_to_tts("抱歉，处理您的请求时出现错误。", True)
 
         except asyncio.TimeoutError:
-            error_msg = "Bisheng AI请求超时"
+            error_msg = "Bisheng AI request timeout"
             self.ten_env.log_error(f"[MainControlExtension] {error_msg}")
+            # Error message in Chinese (can be made configurable)
             await self._send_to_tts("抱歉，请求超时了。", True)
         except Exception as e:
-            error_msg = f"调用Bisheng AI时出错: {str(e)}"
+            error_msg = f"Error calling Bisheng AI: {str(e)}"
             self.ten_env.log_error(f"[MainControlExtension] {error_msg}")
+            # Error message in Chinese (can be made configurable)
             await self._send_to_tts("抱歉，处理您的请求时出现错误。", True)
 
     async def on_start(self, ten_env: AsyncTenEnv):
