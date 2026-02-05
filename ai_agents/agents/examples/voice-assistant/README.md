@@ -7,12 +7,24 @@ English | [简体中文](README.zh-CN.md) | [Integration Guide](VOICE_INTEGRATIO
 > 💡 **Don't have API keys?** Check out the [Free Trial Guide](FREE_TRIAL_GUIDE.md) to get started for free!
 > 
 > 📝 **Using alternative services?** See the [Configuration Modification Guide](CONFIG_MODIFICATION_GUIDE.zh-CN.md) for proper setup!
+>
+> 🔧 **Installation issues?** See the [Installation Troubleshooting Guide](../../../INSTALLATION_TROUBLESHOOTING.md) for help!
 
 ## Features
 
 - **Chained Model Real-time Voice Interaction**: Complete voice conversation pipeline with STT → LLM → TTS processing
 
 ## Prerequisites
+
+### System Requirements
+
+Before installing, ensure you have:
+- **Python 3.10** (required)
+- **Go 1.20+** (required)
+- **Node.js / npm** (required)
+- **tman** (TEN Manager) - [Installation instructions](#install-tman)
+
+> ⚠️ **Important**: If you encounter `tman: executable file not found`, see the [Installation Troubleshooting Guide](../../../INSTALLATION_TROUBLESHOOTING.md).
 
 ### Required Environment Variables
 
@@ -37,7 +49,35 @@ English | [简体中文](README.zh-CN.md) | [Integration Guide](VOICE_INTEGRATIO
 
 ## Setup
 
-### 1. Set Environment Variables
+### 1. Install TEN Manager (tman) {#install-tman}
+
+TEN Manager (tman) is required to build and run TEN applications.
+
+**Ubuntu/Debian:**
+```bash
+sudo add-apt-repository ppa:ten-framework/ten-framework
+sudo apt update
+sudo apt install tman
+```
+
+**macOS:**
+```bash
+brew install TEN-framework/ten-framework/tman
+```
+
+**Installation Script:**
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/TEN-framework/ten-framework/main/tools/tman/install_tman.sh)
+```
+
+**Verify installation:**
+```bash
+tman --version
+```
+
+> **Windows Users**: TEN Framework requires WSL or Docker. See [Installation Troubleshooting Guide](../../../INSTALLATION_TROUBLESHOOTING.md) for details.
+
+### 2. Set Environment Variables
 
 Add to your `.env` file:
 
@@ -61,7 +101,7 @@ ELEVENLABS_TTS_KEY=your_elevenlabs_api_key_here
 WEATHERAPI_API_KEY=your_weather_api_key_here
 ```
 
-### 2. Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 cd agents/examples/voice-assistant
@@ -70,7 +110,9 @@ task install
 
 This installs Python dependencies and frontend components.
 
-### 3. Run the Voice Assistant
+> **Troubleshooting**: If you see errors like `tman: executable file not found`, refer to the [Installation Troubleshooting Guide](../../../INSTALLATION_TROUBLESHOOTING.md).
+
+### 4. Run the Voice Assistant
 
 ```bash
 cd agents/examples/voice-assistant
@@ -79,7 +121,7 @@ task run
 
 The voice assistant starts with all capabilities enabled.
 
-### 4. Access the Application
+### 5. Access the Application
 
 - **Frontend**: http://localhost:3000
 - **API Server**: http://localhost:8080

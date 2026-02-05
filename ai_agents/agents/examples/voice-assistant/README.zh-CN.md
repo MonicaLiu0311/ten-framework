@@ -19,6 +19,18 @@
 
 ### 前置条件
 
+#### 系统要求
+
+安装前，请确保你已经安装：
+- **Python 3.10**（必需）
+- **Go 1.20+**（必需）
+- **Node.js / npm**（必需）
+- **tman**（TEN Manager）- [安装说明](#install-tman)
+
+> ⚠️ **重要**: 如果遇到 `tman: executable file not found` 错误，请查看[安装故障排查指南](../../../INSTALLATION_TROUBLESHOOTING.zh-CN.md)。
+
+#### API 密钥
+
 在开始之前，您需要准备以下服务的 API 密钥：
 
 | 服务 | 用途 | 获取方式 |
@@ -30,7 +42,35 @@
 
 ### 安装步骤
 
-#### 1. 配置环境变量
+#### 1. 安装 TEN Manager (tman) {#install-tman}
+
+TEN Manager (tman) 是构建和运行 TEN 应用的必需工具。
+
+**Ubuntu/Debian:**
+```bash
+sudo add-apt-repository ppa:ten-framework/ten-framework
+sudo apt update
+sudo apt install tman
+```
+
+**macOS:**
+```bash
+brew install TEN-framework/ten-framework/tman
+```
+
+**安装脚本:**
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/TEN-framework/ten-framework/main/tools/tman/install_tman.sh)
+```
+
+**验证安装:**
+```bash
+tman --version
+```
+
+> **Windows 用户**: TEN Framework 需要 WSL 或 Docker。详见[安装故障排查指南](../../../INSTALLATION_TROUBLESHOOTING.zh-CN.md)。
+
+#### 2. 配置环境变量
 
 在项目根目录的 `.env` 文件中添加以下配置：
 
@@ -54,7 +94,7 @@ OPENAI_PROXY_URL=你的_代理_url
 WEATHERAPI_API_KEY=你的_天气_api_key
 ```
 
-#### 2. 安装依赖
+#### 3. 安装依赖
 
 ```bash
 cd agents/examples/voice-assistant
@@ -63,13 +103,15 @@ task install
 
 此命令将安装 Python 依赖和前端组件。
 
-#### 3. 启动语音助手
+> **故障排查**: 如果看到 `tman: executable file not found` 等错误，请参考[安装故障排查指南](../../../INSTALLATION_TROUBLESHOOTING.zh-CN.md)。
+
+#### 4. 启动语音助手
 
 ```bash
 task run
 ```
 
-#### 4. 访问应用
+#### 5. 访问应用
 
 启动成功后，您可以访问以下界面：
 
