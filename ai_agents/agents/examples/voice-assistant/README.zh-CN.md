@@ -4,6 +4,8 @@
 
 [English](README.md) | 简体中文
 
+> 🐳 **推荐使用 Docker！** 使用 Docker 方式，本地只需要安装 Docker，不需要安装 Python、Go、Node.js、Task、tman 等任何工具。查看 [Docker 专属指南](../../../DOCKER_ONLY_SETUP.zh-CN.md)
+>
 > 💡 **没有 API 密钥？** 查看 [免费试用指南](FREE_TRIAL_GUIDE.zh-CN.md) 了解如何免费开始！
 > 
 > 📝 **使用替代服务？** 查看 [配置文件修改指南](CONFIG_MODIFICATION_GUIDE.zh-CN.md) 了解如何正确配置！

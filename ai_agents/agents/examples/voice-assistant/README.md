@@ -4,6 +4,8 @@ A comprehensive voice assistant with real-time conversation capabilities using A
 
 English | [简体中文](README.zh-CN.md) | [Integration Guide](VOICE_INTEGRATION_GUIDE.md) | [集成指南](VOICE_INTEGRATION_GUIDE.zh-CN.md)
 
+> 🐳 **Docker Recommended!** With Docker, you only need Docker installed locally—no Python, Go, Node.js, Task, or tman required. See [Docker-Only Setup Guide](../../../DOCKER_ONLY_SETUP.md)
+>
 > 💡 **Don't have API keys?** Check out the [Free Trial Guide](FREE_TRIAL_GUIDE.md) to get started for free!
 > 
 > 📝 **Using alternative services?** See the [Configuration Modification Guide](CONFIG_MODIFICATION_GUIDE.zh-CN.md) for proper setup!

@@ -1,5 +1,7 @@
 # 安装故障排查指南
 
+> 🐳 **推荐使用 Docker！** 使用 Docker 方式，可以避免 90% 的安装问题。本地只需要安装 Docker，不需要安装 Python、Go、Node.js、Task、tman 等工具。查看 [Docker 专属指南](./DOCKER_ONLY_SETUP.zh-CN.md)
+
 ## 问题：`task install` 任务不存在
 
 ### 症状

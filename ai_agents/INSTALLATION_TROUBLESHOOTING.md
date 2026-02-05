@@ -1,5 +1,7 @@
 # Installation Troubleshooting Guide
 
+> 🐳 **Docker Recommended!** Using Docker avoids 90% of installation issues. You only need Docker installed locally—no Python, Go, Node.js, Task, or tman required. See [Docker-Only Setup Guide](./DOCKER_ONLY_SETUP.md)
+
 ## Issue: `task install` Task Does Not Exist
 
 ### Symptoms
