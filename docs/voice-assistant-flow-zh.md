@@ -306,7 +306,7 @@ request = LLMRequest(
     messages=[
         {
             "role": "system",
-            "content": "你是一个helpful的AI助手"
+            "content": "你是一个有帮助的AI助手"
         },
         {
             "role": "user",
